@@ -22,10 +22,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         <title>{metadata.title}</title>
         <meta name="description" content={metadata.description} />
+        {/* Optional: Add a favicon */}
+        {/* <link rel="icon" href="/path/to/favicon.ico" /> */}
       </head>
-      <body className={jetbrainsMono.variable}>
-        <Header/>
-        <StairTransition/>
+      <body className={`${jetbrainsMono.variable} px-5`}>
+        <Header />
+        <StairTransition />
         <PageTransition>{children}</PageTransition>
       </body>
     </html>
