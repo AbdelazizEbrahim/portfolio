@@ -30,10 +30,6 @@ const about = {
       fieldValue: "Available"
     },
     {
-      fieldName: "Freelance",
-      fieldValue: "Available"
-    },
-    {
       fieldName: "Language",
       fieldValue: "English, Amharic, Arabic(Basic)"
     },
