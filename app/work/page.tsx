@@ -43,6 +43,17 @@ const projects = [
     live: "https://rihletiagency.vercel.app/",
     github: "https://github.com/AbdelazizEbrahim/agency-website",
   },
+    {
+    num: "04",
+    category: "Full-stack",
+    title: "Job board",
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, magni consequatur? Ad tenetur nulla error!",
+    stack: [{name: "Next JS"}, {name: "Tailwind Css"}, {name: "Mongo DB"}, {name: "Typescript"},{name: "WorkOS"}, ],
+    image: "/rihletimage.jpg",
+    live: "",
+    github: "https://github.com/AbdelazizEbrahim/job-board",
+  },
+
 
 ]
 const Work = () => {
@@ -73,7 +84,7 @@ const Work = () => {
                 {/* project category */}
                 <h2 className="text-[42px] font-bold leading-none text-white 
                    group-hover:text-accent transition-all duration-500 capitalize">
-                    {project.category} project
+                    {project.title} project
                 </h2>
                 {/* project description */}
                 <p className="text-white/60">{project.description}</p>
