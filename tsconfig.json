@@ -31,7 +31,7 @@
     ".next/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx"
-, "app/page.js", "app/contact/page.js"  ],
+, "app/page.js", "app/contact/page.js", "app/resume/page.js", "app/work/page.js"  ],
   "exclude": [
     "node_modules"
   ]
