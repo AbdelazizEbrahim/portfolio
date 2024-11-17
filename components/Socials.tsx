@@ -3,10 +3,10 @@ import Link from 'next/link';
 import {FaGithub, FaLinkedin, FaTiktok, FaTelegram } from 'react-icons/fa';
 
 const socials = [
-    {icon: <FaGithub/>, path: ""},
-    {icon: <FaLinkedin/>, path: ""},
-    {icon: <FaTiktok/>, path: ""},
-    {icon: <FaTelegram/>, path: ""},
+    {icon: <FaGithub/>, path: "https://github.com/abdelazizEbrahim"},
+    {icon: <FaLinkedin/>, path: "https://www.linkedin.com/in/abdelaziz-ebrahim-3aa437284/"},
+    {icon: <FaTiktok/>, path: "https://www.tiktok.com/@ab_aziz996"},
+    {icon: <FaTelegram/>, path: "https://t.me/abdelazizEbrahim"},
 ];
 
 const Socials = ({containerStyles, iconStyles}) => {
@@ -14,7 +14,7 @@ const Socials = ({containerStyles, iconStyles}) => {
     <div className={containerStyles}>
       {socials.map((item, index) => {
         return (
-            <Link key={index} href={item.path} className={iconStyles}>
+            <Link target='_blank' key={index} href={item.path} className={iconStyles}>
                 {item.icon}
             </Link>
         )

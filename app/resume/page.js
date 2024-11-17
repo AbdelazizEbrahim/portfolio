@@ -6,104 +6,90 @@ import { SiTailwindcss, SiNextdotjs } from 'react-icons/si';
 
 // about data
 const about = {
-  title: "About me",
-  description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur dicta, delectus debitis ",
+  title: "About Me",
+  description: "I am Abdelaziz Ebrahim, a passionate and motivated beginner in the field of software development. My focus is on learning and building applications with modern technologies to solve real-world problems.",
   info: [
     {
+      icon: "user-circle",
       fieldName: "Name",
       fieldValue: "Abdelaziz Ebrahim"
     },
     {
+      icon: "phone",
       fieldName: "Phone",
       fieldValue: "+251 975 80 5980"
     },
     {
+      icon: "code",
       fieldName: "Experience",
-      fieldValue: "Begginer"
+      fieldValue: "Beginner"
     },
     {
+      icon: "flag",
       fieldName: "Nationality",
       fieldValue: "Ethiopian"
     },
     {
+      icon: "briefcase",
       fieldName: "Freelance",
       fieldValue: "Available"
     },
     {
+      icon: "globe",
       fieldName: "Language",
-      fieldValue: "English, Amharic, Arabic(Basic)"
+      fieldValue: "Amharic, English, Arabic (Basic)"
     },
     {
+      icon: "envelope",
       fieldName: "Email",
       fieldValue: "abdelazizebrahim5980@gmail.com"
     },
   ]
-  
-}
+};
 
 const experiences = {
-  icon: "",
+  icon: "suitcase",
   title: "My Experiences",
   description: 
-       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam aut quae,adipisci soluta odit excepturi facilis",
+       "I am currently gaining hands-on experience in software development by working with a variety of tools and technologies.",
   items: [
     {
       company: "Ibex Technology and Promotion",
-      position: "Full-stack developer Intern",
+      position: "Full-stack Developer Intern",
       duration: "2024 July - 2024 October",
     },
-    {
-      company: "Ibex Technology and Promotion",
-      position: "Full-stack developer Intern",
-      duration: "2024 July - 2024 October",
-    },
-    {
-      company: "Ibex Technology and Promotion",
-      position: "Full-stack developer Intern",
-      duration: "2024 July - 2024 October",
-    },
-    {
-      company: "Ibex Technology and Promotion",
-      position: "Full-stack developer Intern",
-      duration: "2024 July - 2024 October",
-    },
-    {
-      company: "Ibex Technology and Promotion",
-      position: "Full-stack developer Intern",
-      duration: "2024 July - 2024 October",
-    }
   ]
-}
+};
 
 const education = {
-  icon: "",
+  icon: "graduation-cap",
   title: "My Education",
   description: 
-       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam aut quae,adipisci soluta odit excepturi facilis",
+       "I believe in continuous learning and have pursued various formal and online educational opportunities to improve my skills.",
   items: [
     {
-      institution: "Bahir Dar University ",
+      institution: "Bahir Dar University",
       degree: "Computer Science Degree (Expected)",
-      duration: "2022 - 2025 ",
+      duration: "2022 - 2025",
     },
     {
-      institution: "Free Codecamp ",
-      degree: "Data Structure and Algorithm",
+      institution: "Udacity",
+      degree: "Data Science Fundamentals",
       duration: "2024",
     },
     {
-      institution: "Udacity ",
-      degree: "Fundamentals of Programming ",
+      institution: "Udacity",
+      degree: "Fundamentals of Programming",
       duration: "2024",
     },
     {
-      institution: "Udacity ",
+      institution: "Udacity",
       degree: "Fundamentals of Android Development",
       duration: "2024",
     },
-    
   ]
-}
+};
+
 
 const skills = {
   title: "My Skills",

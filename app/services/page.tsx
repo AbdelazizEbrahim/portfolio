@@ -8,32 +8,26 @@ const services = [
   {
     num: '01',
     title: "Front End Development",
-    description:` Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-                 Aliquam vel distinctio quidem natus.`,
-    href: "/"
+    description: `Get started with modern front-end development using Next.js, Tailwind CSS, and shadcn/ui. 
+                  Learn how to build responsive, fast, and visually appealing interfaces with tools designed for developers of all levels.`,
+    href: "/work"
   },
   {
     num: '02',
     title: "Back End Development",
-    description:` Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-                 Aliquam vel distinctio quidem natus.`,
-    href: "/"
-  },
+    description: `Dive into back-end development with Next.js SSR and Node.js. 
+                  Understand server-side rendering, APIs, and integrating MongoDB and PostgreSQL as your databases for creating scalable and dynamic applications.`,
+    href: "/work"
+  },  
   {
     num: '03',
     title: "Content Creation",
-    description:` Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-                 Aliquam vel distinctio quidem natus.`,
-    href: "/"
+    description: `Begin your journey into content creation with hands-on guidance. 
+                  Explore tools and techniques to design and manage engaging content, perfect for someone just getting started.`,
+    href: "/work"
   },
-  {
-    num: '04',
-    title: "Facebook Ads",
-    description:` Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-                 Aliquam vel distinctio quidem natus.`,
-    href: "/"
-  },
-]
+];
+
 
 import { motion } from 'framer-motion'
 

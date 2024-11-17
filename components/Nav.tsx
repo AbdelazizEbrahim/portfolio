@@ -38,7 +38,7 @@ const Nav = () => {
                 link.path === pathname && "text-accent border-b-2 border-accent " 
                 } capitaliz font-medium hover:text-accent transition-all`}>
                     {link.name}
-                </Link>
+            </Link>
         )
       })}
     </nav>
