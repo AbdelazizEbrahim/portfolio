@@ -6,7 +6,7 @@ import Image from 'next/image'
 
 const Photo = () => {
   return (
-    <div className='w-full h-full relative overflow-x-hidden'> {/* Added overflow-hidden here */}
+    <div className='w-full h-full relative overflow-x-hidden '> {/* Added overflow-hidden here */}
         <motion.div
            initial={{opacity: 0}}
            animate={{
@@ -21,20 +21,20 @@ const Photo = () => {
                  opacity:1,
                  transition: { delay: 2.4, duration: 0.4, ease: "easeInOut"},
                 }}
-                className='w-[440px] h-[440px] xl:w-[498px] xl:h-[498] 
-                mix-blend-lighten absolute'>
+                className='xl:w-[440px] xl:h-[440px] 
+                mix-blend-lighten absolute w-[280px] h-[280px] overflow-hidden ml-8'>
                 <Image 
-                   src='/imagenobg.png'
+                   src='/my-image.png'
                    priority
                    quality={100}
                    fill
                    alt=""
-                   className='object-contain'
+                   className='object-contain mt-2 '
                 />
             </motion.div>
             {/* circle */}
             <motion.svg
-               className="w-[300px] xl:w-[460px] h-[300px] xl:h-[460px]"
+               className="w-[300px] xl:w-[460px] h-[300px] xl:h-[460px] ml-5 mt-3"
                fill="transparent"
                viewBox="0 0 506 506" 
                xmlns="https://www.w3.org/2000/svg" 
