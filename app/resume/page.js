@@ -94,7 +94,7 @@ const education = {
 const skills = {
   title: "My Skills",
   description: 
-  "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam aut quae,adipisci soluta odit excepturi facilis",
+    "I have developed a strong foundation in both front-end and back-end technologies, enabling me to create dynamic and responsive web applications.",
   skillList: [
     {
       icon: <FaHtml5/>,
@@ -124,12 +124,9 @@ const skills = {
       icon: <FaNodeJs/>,
       name: "node.js",
     },
-    {
-      icon: <FaFigma/>,
-      name: "figma",
-    },
   ],
 }
+
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
