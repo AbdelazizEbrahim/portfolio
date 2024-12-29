@@ -19,6 +19,10 @@ const Home = () => {
               I excel at crafting elegant digital experiences and websites and I am proficient in different programming languages.
             </p>
             <div className='flex flex-col xl:flex-row items-center gap-8'>
+            <a
+              href="/Abdelaziz Ebrahim CV.pdf"  // Path to the CV file inside the public folder
+              download="Abdelaziz Ebrahim CV"   // Optional: specify the name for the downloaded file
+            >
               <Button 
                 variant="outline"
                 size="lg"
@@ -27,6 +31,7 @@ const Home = () => {
                 <span>Download CV</span>
                 <FiDownload />
               </Button>
+            </a>
               <div className='mb-8 xl:mb-0'>
                 <Socials 
                   containerStyles="flex gap-6"
