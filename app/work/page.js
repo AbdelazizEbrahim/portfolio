@@ -24,16 +24,6 @@ const projects = [
     github: "https://github.com/AbdelazizEbrahim/food-ordering-app",
   },
   {
-    num: "02",
-    category: "Full-stack",
-    title: "E-Learning Platform",
-    description: "A versatile e-learning platform with role-restricted access for three types of users: admin, student, and instructor. The admin has complete control over courses, users, and content.",
-    stack: [{name: "Next JS"}, {name: "Tailwind CSS"}, {name: "MongoDB"}, {name: "JavaScript"}],
-    image: "/e-learning.jpg",
-    live: "",
-    github: "https://github.com/AbdelazizEbrahim/e-learning",
-  },
-  {
     num: "03",
     category: "Full-stack",
     title: "Agency Portfolio",
@@ -44,7 +34,7 @@ const projects = [
     github: "https://github.com/AbdelazizEbrahim/agency-website",
   },
   {
-    num: "04",
+    num: "03",
     category: "Full-stack",
     title: "Job Board",
     description: "A job posting platform connecting employers and job seekers with real-time updates. Includes seamless authentication and secure user management powered by WorkOS.",
@@ -52,6 +42,16 @@ const projects = [
     image: "/job.png",
     live: "",
     github: "https://github.com/AbdelazizEbrahim/job-board",
+  },
+  {
+    num: "04",
+    category: "Full-stack",
+    title: "E-Learning Platform",
+    description: "A versatile e-learning platform with role-restricted access for three types of users: admin, student, and instructor. The admin has complete control over courses, users, and content.",
+    stack: [{name: "Next JS"}, {name: "Tailwind CSS"}, {name: "MongoDB"}, {name: "JavaScript"}],
+    image: "/e-learning.jpg",
+    live: "",
+    github: "https://github.com/AbdelazizEbrahim/e-learning",
   },
   {
     num: "05",
