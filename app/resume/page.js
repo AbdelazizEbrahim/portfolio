@@ -73,18 +73,18 @@ const education = {
       duration: "2022 - 2025",
     },
     {
-      institution: "Udacity",
-      degree: "Data Science Fundamentals",
+      institution: "Simpli Learn",
+      degree: "Data Structure And Algorithm",
       duration: "2024",
     },
     {
-      institution: "Udacity",
-      degree: "Fundamentals of Programming",
-      duration: "2024",
+      institution: "Simpli Learn",
+      degree: "Javascript",
+      duration: "2025",
     },
     {
-      institution: "Udacity",
-      degree: "Fundamentals of Android Development",
+      institution: "Simpli Learn",
+      degree: "Advanced C++",
       duration: "2024",
     },
   ]
