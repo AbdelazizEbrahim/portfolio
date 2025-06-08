@@ -171,11 +171,12 @@ const projects = [
 
 const Work = () => {
   const [project, setProject] = useState(projects[0]);
+
   const handleSlideChange = (swiper) => {
-    console.log("new slider: ", swiper);
     const currentIndex = swiper.activeIndex;
     setProject(projects[currentIndex]);
   };
+
   return (
     <motion.section
       initial={{ opacity: 0 }}
@@ -186,44 +187,37 @@ const Work = () => {
       className="min-h-[80vh] flex flex-col justify-center py-12 xl:px-0 overflow-x-hidden">
       <div className="container mx-auto">
         <div className="flex flex-col xl:flex-row xl:gap-[30px]">
-          <div
-            className="w-full xl:w-[50%] xl:h-[460px] flex flex-col
-             xl:justify-between order-2 xl:order-none">
+          {/* Left Content */}
+          <div className="w-full xl:w-[50%] xl:h-[460px] flex flex-col xl:justify-between order-2 xl:order-none">
             <div className="flex flex-col gap-[30px] h-[50%]">
-              {/* outline num */}
+              {/* Outline number */}
               <div className="text-8xl leading-none font-extrabold text-transparent text-outline">
                 {project.num}
               </div>
-              {/* project category */}
-              <h2
-                className="text-[42px] font-bold leading-none text-white 
-                   group-hover:text-accent transition-all duration-500 capitalize">
+              {/* Project title */}
+              <h2 className="text-[42px] font-bold leading-none text-white capitalize">
                 {project.title}
               </h2>
-              {/* project description */}
+              {/* Project description */}
               <p className="text-white/60">{project.description}</p>
-              {/* stack */}
-              <ul className="flex gap-4">
-                {project.stack.map((item, index) => {
-                  return (
-                    <li key={index} className="text-xl text-accent">
-                      {item.name}
-                      {index !== project.stack.length - 1 && ","}
-                    </li>
-                  );
-                })}
+              {/* Stack */}
+              <ul className="flex gap-4 flex-wrap">
+                {project.stack.map((item, index) => (
+                  <li key={index} className="text-xl text-accent">
+                    {item.name}
+                    {index !== project.stack.length - 1 && ","}
+                  </li>
+                ))}
               </ul>
-              {/* border */}
+              {/* Border */}
               <div className="border border-white/60"></div>
-              {/* button */}
+              {/* Buttons */}
               <div className="flex items-center gap-4">
-                {/* live project */}
-                <Link href={project.live}>
+                {/* Live Project */}
+                <Link href={project.live || "#"} target="_blank">
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
-                      <TooltipTrigger
-                        className="w-[70px] h-[70px] rounded-full
-                             bg-white/5 flex justify-center items-center group">
+                      <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
                         <BsArrowUpRight className="text-white text-3xl group-hover:text-accent" />
                       </TooltipTrigger>
                       <TooltipContent>
@@ -232,17 +226,16 @@ const Work = () => {
                     </Tooltip>
                   </TooltipProvider>
                 </Link>
-                {/* github repo */}
-                <Link href={project.github}>
+
+                {/* GitHub Repo */}
+                <Link href={project.github || "#"} target="_blank">
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
-                      <TooltipTrigger
-                        className="w-[70px] h-[70px] rounded-full
-                             bg-white/5 flex justify-center items-center group">
+                      <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
                         <BsGithub className="text-white text-3xl group-hover:text-accent" />
                       </TooltipTrigger>
                       <TooltipContent>
-                        <p>Github repository</p>
+                        <p>GitHub repository</p>
                       </TooltipContent>
                     </Tooltip>
                   </TooltipProvider>
@@ -251,38 +244,35 @@ const Work = () => {
             </div>
           </div>
 
-          <div className="w-full xl:w-[50%]">
+          {/* Right Swiper */}
+          <div className="w-full xl:w-[50%] xl:max-w-[600px] relative">
             <Swiper
               spaceBetween={30}
               slidesPerView={1}
-              className="xl:h-[520] mb-12"
+              className="xl:h-[460px] mb-12"
               onSlideChange={handleSlideChange}>
-              {projects.map((project, index) => {
-                return (
-                  <SwiperSlide key={index} className="w-full ">
-                    <div className="h-[460px] relative group flex justify-center items-center bg-pink-50/20 ">
-                      {/* overlay */}
-                      <div className="absolute top-0 bottom-0 w-full h-full bg-black"></div>
-                      {/* image */}
-                      <div className="relative w-full h-full ">
-                        <Image
-                          src={project.image}
-                          alt=""
-                          fill
-                          className="object-cover"
-                        />
-                      </div>
+              {projects.map((project, index) => (
+                <SwiperSlide key={index} className="w-full">
+                  <div className="h-[460px] w-full relative group overflow-hidden rounded-2xl">
+                    {/* Overlay */}
+                    <div className="absolute inset-0 bg-black/40 z-10"></div>
+                    {/* Image */}
+                    <div className="absolute inset-0 z-0">
+                      <Image
+                        src={project.image}
+                        alt={project.title}
+                        fill
+                        className="object-cover"
+                      />
                     </div>
-                  </SwiperSlide>
-                );
-              })}
+                  </div>
+                </SwiperSlide>
+              ))}
+
+              {/* Slider Buttons */}
               <WorkSliderBtn
-                containerStyles="flex gap-2 absolute right-0 
-                        bottom-[calc(50%_-_22px)] xl:bottom-0 z-20 
-                        w-full justify-between xl:w-max xl:justify-none"
-                btnStyles="bg-accent hover:bg-accent-hover text-primary 
-                        text-[22px] w-[44px] h-[44px] flex justify-center 
-                        items-center transition-all "
+                containerStyles="absolute top-1/2 -translate-y-1/2 w-full px-4 z-30 flex justify-between"
+                btnStyles="bg-accent hover:bg-accent-hover text-primary text-[22px] w-[44px] h-[44px] flex justify-center items-center transition-all rounded-full"
               />
             </Swiper>
           </div>
