@@ -20,43 +20,58 @@ const projects = [
   {
     num: "01",
     category: "Full-stack",
-    title: "BahirMart Marketplace with Auction",
+    title: "Bahir Mart Marketplace with Auction",
     description:
-      "A marketplace and auction system built with location-based filtering. Key features include merchant verification, AI-powered fraud product detection, user management, dispute handling with refund system, delivery tracking, merchant stock management, a real-time auction engine, and an integrated system chatbot.",
+      "A marketplace and auction platform with location-based filtering. Key features include merchant verification, AI-powered fraud product detection, user management, dispute handling with refund system, delivery tracking, merchant stock management, real-time auction system, and an integrated system chatbot.",
     stack: [
       { name: "Next JS" },
-      { name: "Tailwind CSS" },
+      { name: "Socket.IO" },
+      { name: "ShadCN" },
       { name: "MongoDB" },
+      { name: "Tailwind CSS" },
       { name: "JavaScript" },
       { name: "TypeScript" },
-      { name: "Socket.IO" },
-      { name: "ShadCN UI" },
     ],
     image: "/Bahir Market photo.png",
     live: "",
-    github: "",
+    github: "https://github.com/AbdelazizEbrahim/bahirmart-web",
   },
   {
     num: "02",
     category: "Full-stack",
-    title: "BahirMart Admin",
+    title: "Bahri Mart Admin",
     description:
-      "An advanced admin dashboard tailored for Bahir Mart to oversee marketplace operations and auction activities. Features include merchant and user management, AI fraud detection controls, refund processing, delivery status monitoring, stock management for vendors, and full control over the real-time auction system and system chatbot.",
+      "An admin dashboard for managing a marketplace with auction support. Includes features like merchant verification, AI-based fraud product detection, user and merchant management, dispute and refund resolution, stock tracking, delivery status, chatbot integration, and auction supervision.",
     stack: [
       { name: "Next JS" },
-      { name: "Tailwind CSS" },
+      { name: "Socket.IO" },
+      { name: "ShadCN" },
       { name: "MongoDB" },
+      { name: "Tailwind CSS" },
       { name: "JavaScript" },
       { name: "TypeScript" },
-      { name: "Socket.IO" },
-      { name: "ShadCN UI" },
     ],
     image: "/Bahir admin.png",
     live: "",
-    github: "",
+    github: "https://github.com/AbdelazizEbrahim/bahirmart-admin",
   },
   {
     num: "03",
+    category: "Mobile",
+    title: "Bahir Mart Mobile App",
+    description:
+      "A customer-facing mobile app for Bahir Mart. Key features include product ordering, auction bidding, order tracking, and integrated payment processing.",
+    stack: [
+      { name: "Dart" },
+      { name: "Flutter" },
+      { name: "Next JS (Backend)" },
+    ],
+    image: "/bahir mobile.png",
+    live: "",
+    github: "https://github.com/AbdelazizEbrahim/bahirmart",
+  },
+  {
+    num: "04",
     category: "Full-stack",
     title: "Food Ordering App",
     description:
@@ -72,7 +87,7 @@ const projects = [
     github: "https://github.com/AbdelazizEbrahim/food-ordering-app",
   },
   {
-    num: "04",
+    num: "05",
     category: "Full-stack",
     title: "Agency Portfolio",
     description:
@@ -88,7 +103,7 @@ const projects = [
     github: "https://github.com/AbdelazizEbrahim/agency-website",
   },
   {
-    num: "05",
+    num: "06",
     category: "Full-stack",
     title: "E-Learning Platform",
     description:
@@ -104,7 +119,7 @@ const projects = [
     github: "https://github.com/AbdelazizEbrahim/e-learning",
   },
   {
-    num: "06",
+    num: "07",
     category: "Full-stack",
     title: "Job Board",
     description:
@@ -121,7 +136,7 @@ const projects = [
     github: "https://github.com/AbdelazizEbrahim/job-board",
   },
   {
-    num: "07",
+    num: "08",
     category: "Full-stack",
     title: "Marketplace App",
     description:
@@ -137,7 +152,7 @@ const projects = [
     github: "https://github.com/AbdelazizEbrahim/market-place",
   },
   {
-    num: "08",
+    num: "09",
     category: "Front End",
     title: "Google Clone",
     description:
@@ -152,7 +167,7 @@ const projects = [
     github: "https://github.com/AbdelazizEbrahim/google-clone",
   },
   {
-    num: "09",
+    num: "10",
     category: "Front End",
     title: "IDMB Clone",
     description:
@@ -168,6 +183,7 @@ const projects = [
     github: "https://github.com/AbdelazizEbrahim/IDMb-clone",
   },
 ];
+
 
 const Work = () => {
   const [project, setProject] = useState(projects[0]);
