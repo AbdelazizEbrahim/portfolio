@@ -85,7 +85,7 @@ const education = {
     {
       institution: "Simpli Learn",
       degree: "Advanced C++",
-      duration: "2024",
+      duration: "2025",
     },
   ]
 };
