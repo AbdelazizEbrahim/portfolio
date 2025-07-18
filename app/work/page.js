@@ -20,6 +20,102 @@ const projects = [
   {
     num: "01",
     category: "Full-stack",
+    title: "CPRMS – Clinical Patient Record Management System",
+    description:
+      "A full-stack healthcare record management system with role-based access. Key features include patient registration, record tracking, appointment scheduling, secure server-side data handling, responsive UI, and built-in Next.js API routes for streamlined backend logic.",
+    stack: [
+      { name: "Next JS" },
+      { name: "MongoDB" },
+      { name: "Tailwind CSS" },
+      { name: "TypeScript" },
+      { name: "ShadCN" },
+    ],
+    image: "/cprms.png",
+    live: "https://cprms.vercel.app",
+    github: "https://github.com/AbdelazizEbrahim/cprms",
+  },
+  {
+    num: "02",
+    category: "Full-stack",
+    title: "Zikr App – Daily Islamic Remembrance Tracker",
+    description:
+      "A spiritual productivity app that helps users keep track of daily Adhkar (remembrances). Features include categorized Zikr sections, daily progress tracking, smooth user experience, and mobile-first responsive design. Built with Next.js App Router and dynamic UI components.",
+    stack: [
+      { name: "Next JS" },
+      { name: "Tailwind CSS" },
+      { name: "TypeScript" },
+      { name: "ShadCN" },
+    ],
+    image: "/zikr.png",
+    live: "https://my-zikr-app.vercel.app/",
+    github: "https://github.com/AbdelazizEbrahim/zikr-app",
+  },
+  {
+    num: "03",
+    category: "Full-stack",
+    title: "Food Ordering App",
+    description:
+      "A comprehensive food ordering platform featuring an integrated Chapa payment system, an admin dashboard for managing orders, and role-restricted access for secure user interactions.",
+    stack: [
+      { name: "Next JS" },
+      { name: "Tailwind CSS" },
+      { name: "MongoDB" },
+      { name: "JavaScript" },
+    ],
+    image: "/foodordering.jpg",
+    live: "https://amifabroast.vercel.app/",
+    github: "https://github.com/AbdelazizEbrahim/food-ordering-app",
+  },
+  {
+    num: "04",
+    category: "Full-stack",
+    title: "Agency Portfolio",
+    description:
+      "A modern portfolio website for showcasing agency services and publishing new blogs with a dedicated blog page. The admin oversees all operations with role-restricted access.",
+    stack: [
+      { name: "Next JS" },
+      { name: "Tailwind CSS" },
+      { name: "MongoDB" },
+      { name: "TypeScript" },
+    ],
+    image: "/agency.png",
+    live: "https://rihletiagency.vercel.app/",
+    github: "https://github.com/AbdelazizEbrahim/agency-website",
+  },
+  {
+    num: "05",
+    category: "Frontend",
+    title: "Library Management System – Frontend",
+    description:
+      "A responsive frontend for a library management system built with Next.js and TypeScript. Features include dynamic book listings, category filtering, search functionality, and user-friendly navigation. Designed for integration with a full backend API for seamless user experience.",
+    stack: [
+      { name: "Next JS" },
+      { name: "Tailwind CSS" },
+      { name: "TypeScript" },
+      { name: "ShadCN" },
+    ],
+    image: "/library-front.png",
+    live: "https://library-front-nextjs.vercel.app/",
+    github: "https://github.com/AbdelazizEbrahim/library_front_nextjs",
+  },
+  {
+    num: "06",
+    category: "Mobile",
+    title: "Bahir Mart Mobile App",
+    description:
+      "A customer-facing mobile app for Bahir Mart. Key features include product ordering, auction bidding, order tracking, and integrated payment processing.",
+    stack: [
+      { name: "Dart" },
+      { name: "Flutter" },
+      { name: "Next JS (Backend)" },
+    ],
+    image: "/bahir mobile.png",
+    live: "",
+    github: "https://github.com/AbdelazizEbrahim/bahirmart",
+  },
+  {
+    num: "07",
+    category: "Full-stack",
     title: "Bahir Mart Marketplace with Auction",
     description:
       "A marketplace and auction platform with location-based filtering. Key features include merchant verification, AI-powered fraud product detection, user management, dispute handling with refund system, delivery tracking, merchant stock management, real-time auction system, and an integrated system chatbot.",
@@ -37,7 +133,7 @@ const projects = [
     github: "https://github.com/AbdelazizEbrahim/bahirmart-web",
   },
   {
-    num: "02",
+    num: "08",
     category: "Full-stack",
     title: "Bahri Mart Admin",
     description:
@@ -56,54 +152,45 @@ const projects = [
     github: "https://github.com/AbdelazizEbrahim/bahirmart-admin",
   },
   {
-    num: "03",
-    category: "Mobile",
-    title: "Bahir Mart Mobile App",
-    description:
-      "A customer-facing mobile app for Bahir Mart. Key features include product ordering, auction bidding, order tracking, and integrated payment processing.",
-    stack: [
-      { name: "Dart" },
-      { name: "Flutter" },
-      { name: "Next JS (Backend)" },
-    ],
-    image: "/bahir mobile.png",
-    live: "",
-    github: "https://github.com/AbdelazizEbrahim/bahirmart",
-  },
-  {
-    num: "04",
+    num: "09",
     category: "Full-stack",
-    title: "Food Ordering App",
+    title: "YumDrop – Food Delivery App",
     description:
-      "A comprehensive food ordering platform featuring an integrated Chapa payment system, an admin dashboard for managing orders, and role-restricted access for secure user interactions.",
+      "A full-featured food delivery platform with multiple user roles: customers, restaurant owners, and delivery drivers. Core features include real bolsas de aire-time order tracking, role-based dashboards, Google OAuth via NextAuth, restaurant and menu management, customer reviews, and search/filter functionality.",
     stack: [
       { name: "Next JS" },
       { name: "Tailwind CSS" },
       { name: "MongoDB" },
-      { name: "JavaScript" },
-    ],
-    image: "/foodordering.jpg",
-    live: "https://amifabroast.vercel.app/",
-    github: "https://github.com/AbdelazizEbrahim/food-ordering-app",
-  },
-  {
-    num: "05",
-    category: "Full-stack",
-    title: "Agency Portfolio",
-    description:
-      "A modern portfolio website for showcasing agency services and publishing new blogs with a dedicated blog page. The admin oversees all operations with role-restricted access.",
-    stack: [
-      { name: "Next JS" },
-      { name: "Tailwind CSS" },
-      { name: "MongoDB" },
+      { name: "NextAuth.js" },
       { name: "TypeScript" },
+      { name: "Zod" },
+      { name: "ShadCN" },
     ],
-    image: "/agency.png",
-    live: "https://rihletiagency.vercel.app/",
-    github: "https://github.com/AbdelazizEbrahim/agency-website",
+    image: "/yum-drop.png",
+    live: "",
+    github: "https://github.com/AbdelazizEbrahim/yum-drop-delivery",
   },
   {
-    num: "06",
+    num: "10",
+    category: "Full-stack",
+    title: "Reddish – Reddit Clone",
+    description:
+      "A full-stack Reddit clone featuring community creation, post voting, nested comments, and user authentication. Includes moderation tools, Google OAuth via NextAuth, a rich post editor, and dark mode. Built for scalability with modern tech and responsive design.",
+    stack: [
+      { name: "Next JS" },
+      { name: "Tailwind CSS" },
+      { name: "MongoDB" },
+      { name: "NextAuth.js" },
+      { name: "TypeScript" },
+      { name: "Zod" },
+      { name: "ShadCN" },
+    ],
+    image: "/reddish.png",
+    live: "",
+    github: "https://github.com/AbdelazizEbrahim/Reddish-clone",
+  },
+  {
+    num: "11",
     category: "Full-stack",
     title: "E-Learning Platform",
     description:
@@ -119,7 +206,7 @@ const projects = [
     github: "https://github.com/AbdelazizEbrahim/e-learning",
   },
   {
-    num: "07",
+    num: "12",
     category: "Full-stack",
     title: "Job Board",
     description:
@@ -136,7 +223,7 @@ const projects = [
     github: "https://github.com/AbdelazizEbrahim/job-board",
   },
   {
-    num: "08",
+    num: "13",
     category: "Full-stack",
     title: "Marketplace App",
     description:
@@ -152,7 +239,7 @@ const projects = [
     github: "https://github.com/AbdelazizEbrahim/market-place",
   },
   {
-    num: "09",
+    num: "14",
     category: "Front End",
     title: "Google Clone",
     description:
@@ -167,7 +254,7 @@ const projects = [
     github: "https://github.com/AbdelazizEbrahim/google-clone",
   },
   {
-    num: "10",
+    num: "15",
     category: "Front End",
     title: "IDMB Clone",
     description:
@@ -183,7 +270,6 @@ const projects = [
     github: "https://github.com/AbdelazizEbrahim/IDMb-clone",
   },
 ];
-
 
 const Work = () => {
   const [project, setProject] = useState(projects[0]);
