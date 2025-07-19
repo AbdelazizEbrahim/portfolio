@@ -30,7 +30,7 @@ const about = {
     {
       icon: "code",
       fieldName: "Experience",
-      fieldValue: "Beginner",
+      fieldValue: "Intermediate",
     },
     {
       icon: "flag",
