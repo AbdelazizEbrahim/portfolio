@@ -32,7 +32,7 @@ const info = [
   {
     icon: <FaMapMarkedAlt />,
     title: 'Address',
-    description: 'Bahir Dar, Ethiopia',
+    description: 'Addis Ababa, Ethiopia',
   },
 ];
 
