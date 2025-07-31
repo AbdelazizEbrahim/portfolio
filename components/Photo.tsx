@@ -24,7 +24,7 @@ const Photo = () => {
                 className='xl:w-[440px] xl:h-[440px] 
                 mix-blend-lighten absolute w-[280px] h-[280px] overflow-hidden ml-8'>
                 <Image 
-                   src='/my-image.png'
+                   src='/my-image1.png'
                    priority
                    quality={100}
                    fill
