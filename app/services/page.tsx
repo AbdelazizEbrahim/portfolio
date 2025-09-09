@@ -15,7 +15,7 @@ const services = [
   {
     num: "02",
     title: "Back End Development",
-    description: `Dive into back-end development with Next.js SSR and Node.js. 
+    description: `Dive into back-end development with Next.js SSR, Node.js and Laravel. 
                   Understand server-side rendering, APIs, and integrating MongoDB and PostgreSQL as your databases for creating scalable and dynamic applications.`,
     href: "/work",
   },

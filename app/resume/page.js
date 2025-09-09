@@ -9,7 +9,7 @@ import {
   FaFigma,
   FaNodeJs,
 } from "react-icons/fa";
-import { SiTailwindcss, SiNextdotjs } from "react-icons/si";
+import { SiTailwindcss, SiNextdotjs, SiLaravel } from "react-icons/si";
 
 // about data
 const about = {
@@ -65,11 +65,22 @@ const experiences = {
       company: "Ibex Technology and Promotion",
       position: "Full-stack Developer Intern",
       duration: "2024 July - 2024 October",
+      description:
+        "Developed a full-stack e-learning platform using Next.js, Node.js, MongoDB, Firebase, and Tailwind CSS. Built frontend UI, backend APIs, and integrated payment gateways for secure transactions.",
     },
     {
       company: "Nile Technology Solution",
       position: "Back-End Developer Intern",
       duration: "2025 April - 2025 July",
+      description:
+        "Maintained backend services for the Nilecare health platform, developed RESTful APIs, implemented secure authentication, and managed MongoDB data modeling for system reliability.",
+    },
+    {
+      company: "Tinamart E-Commerce",
+      position: "Back-End Developer Contract",
+      duration: "2025 July - 2025 November",
+      description:
+        "Worked as a full-stack developer with Laravel (PHP) and MySQL on the backend and Next.js on the frontend. Built APIs, optimized databases, and integrated payment systems while ensuring scalability and a seamless user experience.",
     },
   ],
 };
@@ -115,6 +126,10 @@ const skills = {
     {
       icon: <FaCss3 />,
       name: "css 3",
+    },
+    {
+      icon: <SiLaravel />,
+      name: "laravel",
     },
     {
       icon: <FaJs />,
@@ -196,6 +211,7 @@ const Resume = () => {
                             <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
                             <p className="text-white/60">{item.company}</p>
                           </div>
+                          
                         </li>
                       );
                     })}
