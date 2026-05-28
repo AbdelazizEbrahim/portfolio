@@ -14,7 +14,7 @@ export default function HeroSection() {
   return (
     <section className="mb-10 xl:mb-16 overflow-hidden">
       <div className="container mx-auto max-w-full">
-        <div className="flex flex-col xl:flex-row items-center xl:items-center justify-between gap-10 xl:gap-16 xl:pt-8 xl:pb-8">
+        <div className="flex flex-col xl:flex-row items-center xl:items-center justify-between gap-10 xl:gap-12 xl:pt-8 xl:pb-8">
           <div className="w-full min-w-0 text-center xl:text-left order-2 xl:order-1 xl:flex-1">
             <p className="text-accent text-sm sm:text-base font-medium tracking-wide uppercase mb-3 xl:mb-4 mt-2 xl:mt-0">
               {heroContent.role}
@@ -32,7 +32,7 @@ export default function HeroSection() {
               {heroContent.intro}
             </p>
 
-            <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center xl:justify-start gap-4 sm:gap-5">
+            <div className="flex flex-col items-center xl:items-start gap-4 sm:gap-5 max-w-lg mx-auto xl:mx-0 xl:max-w-none">
               <Link href="/work#enterprise" className="w-full sm:w-auto">
                 <Button
                   size="lg"
@@ -42,34 +42,31 @@ export default function HeroSection() {
                   <FiArrowRight className="text-lg" />
                 </Button>
               </Link>
-              <a
-                href="/Abdelaziz Ebrahim CV.pdf"
-                download="Abdelaziz Ebrahim CV"
-                className="w-full sm:w-auto"
-              >
-                <Button
-                  variant="outline"
-                  size="lg"
-                  className="w-full sm:w-auto uppercase flex items-center justify-center gap-2"
-                >
-                  <span>Download CV</span>
-                  <FiDownload />
-                </Button>
-              </a>
-            </div>
 
-            <div className="mt-10 sm:mt-12 pt-8 border-t border-white/10 flex flex-col items-center xl:items-start gap-4">
-              <p className="text-white/50 text-xs uppercase tracking-widest">
-                Connect
-              </p>
-              <Socials
-                containerStyles="flex gap-5 sm:gap-6 justify-center xl:justify-start"
-                iconStyles={socialIconStyles}
-              />
+              <div className="flex w-full flex-row items-center justify-center xl:justify-start gap-3 sm:gap-4">
+                <a
+                  href="/Abdelaziz Ebrahim CV.pdf"
+                  download="Abdelaziz Ebrahim CV"
+                  className="shrink-0"
+                >
+                  <Button
+                    variant="outline"
+                    size="lg"
+                    className="uppercase flex items-center justify-center gap-2 whitespace-nowrap"
+                  >
+                    <span>Download CV</span>
+                    <FiDownload />
+                  </Button>
+                </a>
+                <Socials
+                  containerStyles="flex items-center gap-3 sm:gap-4 shrink-0"
+                  iconStyles={socialIconStyles}
+                />
+              </div>
             </div>
           </div>
 
-          <div className="order-1 xl:order-2 w-full xl:w-auto flex justify-center xl:justify-end shrink-0 min-w-0">
+          <div className="order-1 xl:order-2 w-full xl:w-auto flex justify-center xl:justify-end shrink-0 min-w-0 pb-8 sm:pb-0">
             <HeroPhotoWithTech />
           </div>
         </div>

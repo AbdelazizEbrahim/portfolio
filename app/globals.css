@@ -8,6 +8,7 @@
   }
   body {
     @apply font-primary bg-primary text-white leading-loose overflow-x-hidden max-w-[100vw];
+    font-family: var(--font-jetbrainsMono), ui-monospace, monospace;
   }
   .h1 {
     @apply text-[40px] xl:text-[68px] leading-[1.1] font-semibold;
