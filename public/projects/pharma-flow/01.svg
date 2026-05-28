@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-label="Pharma Flow cover placeholder">
+  <defs>
+    <linearGradient id="bg" x1="50%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f1a24"/>
+      <stop offset="100%" style="stop-color:#1c1c22"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg)"/>
+  <rect x="48" y="48" width="1104" height="579" rx="16" fill="none" stroke="#00ff99" stroke-width="2" stroke-opacity="0.35"/>
+  <text x="600" y="300" text-anchor="middle" fill="#00ff99" font-family="system-ui,sans-serif" font-size="52" font-weight="700">Pharma Flow</text>
+  <text x="600" y="360" text-anchor="middle" fill="#ffffff" fill-opacity="0.55" font-family="system-ui,sans-serif" font-size="22">Replace with 01.webp screenshot</text>
+</svg>

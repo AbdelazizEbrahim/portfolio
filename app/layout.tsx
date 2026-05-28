@@ -12,8 +12,9 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata = {
-  title: "Abdelaziz Ebrahim",
-  description: "Abdelaziz personal portfolio",
+  title: "Abdelaziz Ebrahim | Full-Stack Engineer",
+  description:
+    "Full-stack engineer building multi-tenant business platforms—POS, pharmacy, and cafe systems with PostgreSQL, Prisma, Socket.IO, and real-time operations.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
