@@ -4,7 +4,7 @@ import HeroSection from "@/components/home/HeroSection";
 
 export const metadata = createPageMetadata(
   "Home",
-  "Full-stack engineer — DocuIva, Cyber POS, OrderPulse, Pharma Flow, and enterprise platforms."
+  "Full-stack engineer — Dociva, Cyber POS, OrderPulse, Pharma Flow, and enterprise platforms."
 );
 import LandingStats from "@/components/home/LandingStats";
 import FeaturedProjects from "@/components/home/FeaturedProjects";

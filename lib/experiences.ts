@@ -8,13 +8,13 @@ export type Experience = {
 
 export const experiences: Experience[] = [
   {
-    company: "Syber Tech",
+    company: "Cyber Tech",
     position: "Full Stack Developer",
-    duration: "May 2026 – Present",
+    duration: "September 2025 – Present",
     description:
-      "Building scalable SaaS and business platforms with Next.js, Node.js, PostgreSQL, and TypeScript. Delivered DocuIva (document workflows) and Cyber POS (multi-tenant POS & inventory)—backend APIs, authentication, dashboards, debugging, and production feature releases.",
+      "Building scalable SaaS and business platforms with Next.js, Node.js, PostgreSQL, and TypeScript. Delivered Dociva (document workflows) and Cyber POS (multi-tenant POS & inventory)—backend APIs, authentication, dashboards, debugging, and production feature releases.",
     links: [
-      { label: "DocuIva", href: "https://dociva.et/" },
+      { label: "Dociva", href: "https://dociva.et/" },
       { label: "Cyber POS", href: "https://cyberpos.vercel.app/" },
     ],
   },

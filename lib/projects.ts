@@ -62,7 +62,7 @@ export const enterpriseProjects: PortfolioProject[] = [
     slug: "docuiva",
     num: "01",
     category: "Enterprise · Full-stack",
-    title: "DocuIva",
+    title: "Dociva",
     tagline: "Document workflow & management platform",
     description:
       "Production document management for organizing, tracking, and processing business documents—with role-based access and bilingual support (English & Amharic).",
