@@ -19,65 +19,79 @@ export default function CaseStudyView({ study }) {
       className="pb-16 xl:pb-24"
     >
       <div className="container mx-auto">
-        {/* Hero */}
-        <header className="pt-4 sm:pt-8 mb-10 sm:mb-12">
+        {/* Hero: intro (left) + minimal cover (right), 50/50 viewport on lg+ */}
+        <header className="pt-0 sm:pt-1 mb-8 sm:mb-10">
           <Link
             href="/work#enterprise"
-            className="text-sm text-white/50 hover:text-accent mb-6 inline-flex items-center min-h-[44px]"
+            className="text-sm text-white/50 hover:text-accent mb-4 sm:mb-5 inline-flex items-center min-h-[44px]"
           >
             ← Flagship work
           </Link>
 
-          <div className="flex flex-wrap items-center gap-3 mb-4">
-            <span className="text-accent text-sm uppercase tracking-widest">
-              {study.category}
-            </span>
-            <ProjectStatusBadge status={study.status} />
-          </div>
+          <div
+            className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-10 items-start
+              lg:relative lg:left-1/2 lg:right-1/2 lg:-ml-[50vw] lg:-mr-[50vw] lg:w-screen lg:max-w-[100vw]"
+          >
+            <div className="min-w-0 lg:pl-[max(1rem,calc((100vw-min(100%,80rem))/2+1rem))] lg:pr-6 xl:pr-10">
+              <div className="flex flex-wrap items-center gap-3 mb-3 sm:mb-4">
+                <span className="text-accent text-sm uppercase tracking-widest">
+                  {study.category}
+                </span>
+                <ProjectStatusBadge status={study.status} />
+              </div>
 
-          <h1 className="h1 text-white mb-3">{study.title}</h1>
-          <p className="text-lg sm:text-xl text-accent font-medium max-w-3xl mb-4">
-            {study.tagline}
-          </p>
-          <p className="text-white/70 max-w-3xl text-sm sm:text-base leading-relaxed mb-6">
-            {study.description}
-          </p>
+              <h1 className="h1 text-white mb-2 sm:mb-3">{study.title}</h1>
+              <p className="text-base sm:text-lg xl:text-xl text-accent font-medium mb-3 sm:mb-4 leading-snug">
+                {study.tagline}
+              </p>
+              <p className="text-white/70 text-sm sm:text-base leading-relaxed mb-5 sm:mb-6">
+                {study.description}
+              </p>
 
-          <div className="flex flex-col sm:flex-row gap-3">
-            {study.liveUrl && (
-              <a
-                href={study.liveUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 min-h-[48px] px-6 rounded-full bg-accent text-primary font-semibold hover:bg-accent-hover transition-colors"
-              >
-                <FiExternalLink />
-                Open live demo
-              </a>
-            )}
-            <Link
-              href="/contact"
-              className="inline-flex items-center justify-center min-h-[48px] px-6 rounded-full border border-white/25 text-white font-semibold hover:border-accent hover:text-accent transition-colors"
+              <div className="flex flex-col sm:flex-row gap-3">
+                {study.liveUrl && (
+                  <a
+                    href={study.liveUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center gap-2 min-h-[48px] px-6 rounded-full bg-accent text-primary font-semibold hover:bg-accent-hover transition-colors"
+                  >
+                    <FiExternalLink />
+                    Open live demo
+                  </a>
+                )}
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center justify-center min-h-[48px] px-6 rounded-full border border-white/25 text-white font-semibold hover:border-accent hover:text-accent transition-colors"
+                >
+                  Hire me
+                </Link>
+              </div>
+            </div>
+
+            <div
+              className="relative w-full lg:w-full aspect-[16/10] sm:aspect-[3/2] lg:aspect-auto
+                min-h-[160px] max-h-[220px] sm:max-h-[260px] lg:max-h-[min(42vh,400px)] lg:min-h-[240px]
+                rounded-md overflow-hidden border border-white/5 bg-primary/20
+                lg:rounded-none lg:border-y-0 lg:border-r-0 lg:border-l lg:border-l-white/10"
             >
-              Hire me
-            </Link>
+              <ProjectCoverImage
+                slug={study.slug}
+                preferredSrc={study.coverSrc}
+                alt={`${study.title} cover`}
+                priority
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                className="object-contain object-center p-3 sm:p-4"
+              />
+            </div>
           </div>
         </header>
 
-        {/* Cover + gallery */}
+        {/* Gallery */}
         <section className="mb-12 sm:mb-16" aria-labelledby="gallery-heading">
           <h2 id="gallery-heading" className="sr-only">
             Project gallery
           </h2>
-          <div className="relative w-full aspect-[16/10] rounded-2xl overflow-hidden border border-white/10 mb-6 sm:hidden">
-            <ProjectCoverImage
-              slug={study.slug}
-              preferredSrc={study.coverSrc}
-              alt={`${study.title} cover`}
-              priority
-              sizes="100vw"
-            />
-          </div>
           <ProjectGallery slug={study.slug} title={study.title} />
         </section>
 

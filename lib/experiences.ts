@@ -12,7 +12,7 @@ export const experiences: Experience[] = [
     position: "Full Stack Developer",
     duration: "September 2025 – Present",
     description:
-      "Building scalable SaaS and business platforms with Next.js, Node.js, PostgreSQL, and TypeScript. Delivered Dociva (document workflows) and Cyber POS (multi-tenant POS & inventory)—backend APIs, authentication, dashboards, debugging, and production feature releases.",
+      "Building scalable SaaS and business platforms with Next.js, Node.js, PostgreSQL, and TypeScript. Delivered Dociva (document workflows, live video session booking, and video features) and Cyber POS (multi-tenant POS & inventory)—backend APIs, authentication, dashboards, debugging, and production feature releases.",
     links: [
       { label: "Dociva", href: "https://dociva.et/" },
       { label: "Cyber POS", href: "https://cyberpos.vercel.app/" },

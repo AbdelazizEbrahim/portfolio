@@ -8,9 +8,9 @@ import { services } from "@/lib/services";
 
 const Services = () => {
   return (
-    <section className="mb-10">
+    <section className="mb-10 pt-0">
       <div className="container mx-auto">
-        <header className="text-center xl:text-left mb-10 sm:mb-14 max-w-2xl mx-auto xl:mx-0">
+        <header className="text-center xl:text-left mb-8 sm:mb-10 max-w-2xl mx-auto xl:mx-0">
           <p className="text-accent text-sm uppercase tracking-widest mb-2">
             Services
           </p>
@@ -18,7 +18,7 @@ const Services = () => {
           <p className="text-white/60 text-sm sm:text-base leading-relaxed">
             Full-stack delivery for operators who need inventory, POS, finance,
             and real-time coordination in one platform—see{" "}
-            <Link href="/work#flagship" className="text-accent hover:underline">
+            <Link href="/work#enterprise" className="text-accent hover:underline">
               flagship work
             </Link>{" "}
             for live examples.

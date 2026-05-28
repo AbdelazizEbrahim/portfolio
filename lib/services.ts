@@ -3,7 +3,7 @@ export const services = [
     num: "01",
     title: "Dociva & document platforms",
     description:
-      "Production document workflow systems—organization, tracking, RBAC, and bilingual UX. Live at dociva.et, built with Next.js, TypeScript, and Node.js.",
+      "Document workflows with live video session booking, in-app video features, RBAC, and bilingual UX. Live at dociva.et.",
     href: "https://dociva.et/",
   },
   {

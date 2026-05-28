@@ -11,7 +11,7 @@ import FeaturedProjects from "@/components/home/FeaturedProjects";
 
 export default function Home() {
   return (
-    <div className="h-full mb-12 xl:mb-20 overflow-x-hidden max-w-full">
+    <div className="h-full mb-8 xl:mb-20 overflow-x-hidden max-w-full">
       <HeroSection />
       <LandingStats />
       <FeaturedProjects />

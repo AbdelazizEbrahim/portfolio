@@ -98,7 +98,7 @@ import {
 } from "@/components/ui/tooltip";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { motion } from "framer-motion";
-import FlagshipProjectsSection from "@/components/resume/FlagshipProjectsSection";
+import EnterprisePlatformsTab from "@/components/resume/EnterprisePlatformsTab";
 
 const Resume = () => {
   return (
@@ -108,21 +108,22 @@ const Resume = () => {
         opacity: 1,
         transition: { delay: 2.4, duration: 0.4, ease: "easeIn" },
       }}
-      className="min-h-[80vh] flex items-center justify-center py-12 xl:py-0">
+      className="min-h-[80vh] flex items-start xl:items-center justify-center pt-0 pb-8 xl:py-0">
       <div className="container mx-auto">
-        <FlagshipProjectsSection />
         <Tabs
-          defaultValue="experience"
+          defaultValue="enterprise"
           className="flex flex-col xl:flex-row gap-[60px]">
           <TabsList className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6">
+            <TabsTrigger value="enterprise">Enterprise platforms</TabsTrigger>
             <TabsTrigger value="experience">Experience</TabsTrigger>
             <TabsTrigger value="education">Education</TabsTrigger>
             <TabsTrigger value="skills">Skills</TabsTrigger>
             <TabsTrigger value="about">About Me</TabsTrigger>
           </TabsList>
-          {/* content */}
           <div className="min-h-[70vh] w-full">
-            {/* experiences */}
+            <TabsContent value="enterprise" className="w-full">
+              <EnterprisePlatformsTab />
+            </TabsContent>
             <TabsContent value="experience" className="w-full">
               <div className="mb-8 flex flex-col gap-[30px] text-center xl:text-left">
                 <h3 className="text-4xl font-bold">{experienceSection.title}</h3>

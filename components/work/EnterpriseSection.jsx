@@ -7,11 +7,11 @@ export default function EnterpriseSection() {
   return (
     <section
       id="enterprise"
-      className="scroll-mt-28 py-8 sm:py-12 xl:py-14"
+      className="scroll-mt-24 pt-0 pb-8 sm:pb-10 xl:pb-14"
       aria-labelledby="enterprise-title"
     >
       <div className="container mx-auto">
-        <header className="mb-8 sm:mb-10 xl:mb-12 text-center xl:text-left">
+        <header className="mb-6 sm:mb-8 xl:mb-10 text-center xl:text-left">
           <p className="text-accent text-sm uppercase tracking-widest mb-2">
             Enterprise platforms
           </p>

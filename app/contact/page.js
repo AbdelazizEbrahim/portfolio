@@ -92,7 +92,7 @@ const Contact = () => {
         opacity: 1,
         transition: { delay: 0.4, duration: 0.4, ease: "easeIn" },
       }}
-      className="py-6 overflow-x-hidden overflow-y-auto">
+      className="pt-0 pb-6 overflow-x-hidden overflow-y-auto">
       <div className="container mx-auto">
         <div className="flex flex-col xl:flex-row gap-[px]">
           <div className="xl:w-[54%] order-2 xl:order-none">

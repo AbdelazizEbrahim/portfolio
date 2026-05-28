@@ -24,7 +24,7 @@ export default function WorkPageContent() {
         opacity: 1,
         transition: { delay: 2.4, duration: 0.4, ease: "easeIn" },
       }}
-      className="min-h-[80vh] overflow-x-hidden pb-16 xl:pb-24 max-w-full"
+      className="min-h-[80vh] overflow-x-hidden pb-16 xl:pb-24 max-w-full -mt-1 pt-0"
     >
       <EnterpriseSection />
     </motion.div>

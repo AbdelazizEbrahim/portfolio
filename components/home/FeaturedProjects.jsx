@@ -18,11 +18,11 @@ export default function FeaturedProjects() {
   return (
     <section
       id="flagship-work"
-      className="py-12 xl:py-16 border-t border-white/10 overflow-hidden"
+      className="py-8 sm:py-12 xl:py-16 border-t border-white/10 overflow-hidden"
       aria-labelledby="flagship-heading"
     >
       <div className="container mx-auto max-w-full">
-        <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-8 xl:mb-10">
+        <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-3 mb-5 sm:mb-8 xl:mb-10">
           <div className="text-center sm:text-left">
             <p className="text-accent text-sm uppercase tracking-widest mb-2">
               Featured work
