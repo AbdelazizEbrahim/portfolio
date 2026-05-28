@@ -1,13 +1,14 @@
 "use client";
 
 import Link from "next/link";
-import { BsArrowUpRight, BsGithub } from "react-icons/bs";
+import { BsArrowUpRight } from "react-icons/bs";
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import ProjectGithubButton from "@/components/project/ProjectGithubButton";
 
 export default function ProjectActionButtons({ project, size = "lg" }) {
   const dim =
@@ -16,7 +17,6 @@ export default function ProjectActionButtons({ project, size = "lg" }) {
       : "w-[48px] h-[48px] text-xl";
 
   const hasLive = Boolean(project.liveUrl);
-  const hasGithub = project.showGithub && Boolean(project.githubUrl);
 
   return (
     <div className="flex items-center gap-3 sm:gap-4">
@@ -37,7 +37,6 @@ export default function ProjectActionButtons({ project, size = "lg" }) {
               <span
                 className={`${dim} rounded-full bg-white/5 flex justify-center items-center opacity-40 cursor-not-allowed`}
                 aria-disabled
-                title="No live demo"
               >
                 <BsArrowUpRight className="text-white/50" />
               </span>
@@ -49,26 +48,7 @@ export default function ProjectActionButtons({ project, size = "lg" }) {
         </Tooltip>
       </TooltipProvider>
 
-      {hasGithub && (
-        <TooltipProvider delayDuration={100}>
-          <Tooltip>
-            <TooltipTrigger asChild>
-              <Link
-                href={project.githubUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`${dim} rounded-full bg-white/5 flex justify-center items-center group hover:bg-accent/20 transition-colors`}
-                aria-label="Open GitHub repository"
-              >
-                <BsGithub className="text-white group-hover:text-accent" />
-              </Link>
-            </TooltipTrigger>
-            <TooltipContent>
-              <p>GitHub repository</p>
-            </TooltipContent>
-          </Tooltip>
-        </TooltipProvider>
-      )}
+      <ProjectGithubButton project={project} size={size} />
     </div>
   );
 }

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import ProjectCoverImage from "@/components/project/ProjectCoverImage";
@@ -73,7 +74,7 @@ export default function ProjectShowcase({
             {project.description}
           </p>
 
-          {isFlagship && project.highlights?.length > 0 && (
+          {project.highlights?.length > 0 && (
             <ul className="space-y-2 sm:space-y-2.5">
               {project.highlights.map((item) => (
                 <li
@@ -102,10 +103,20 @@ export default function ProjectShowcase({
 
           <div className="border border-white/20" />
 
-          <ProjectActionButtons
-            project={project}
-            size={isFlagship ? "lg" : "md"}
-          />
+          <div className="flex flex-col sm:flex-row sm:items-center gap-4">
+            <ProjectActionButtons
+              project={project}
+              size={isFlagship ? "lg" : "md"}
+            />
+            {project.hasCaseStudy && (
+              <Link
+                href={`/work/${project.slug}`}
+                className="inline-flex items-center justify-center min-h-[44px] px-5 rounded-full border border-accent/50 text-accent text-sm font-semibold hover:bg-accent hover:text-primary transition-colors w-full sm:w-auto"
+              >
+                Full case study
+              </Link>
+            )}
+          </div>
         </div>
       </div>
 

@@ -4,5 +4,7 @@ export {
   landingStats,
   techStackGroups,
   flagshipProjects,
+  enterpriseProjects,
+  moreProjects,
   type PortfolioProject,
 } from "./projects";

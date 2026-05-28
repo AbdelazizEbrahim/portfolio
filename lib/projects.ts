@@ -13,30 +13,29 @@ export type PortfolioProject = {
   description: string;
   highlights: string[];
   stack: string[];
-  /** public/projects/{slug}/01.* — set via projectCover() */
   coverSrc: string;
-  /** Legacy image in /public root for older projects */
   legacyImage?: string;
   liveUrl?: string;
   githubUrl?: string;
+  /** Show GitHub control; opens repo or private toast */
   showGithub: boolean;
+  githubPrivate?: boolean;
   featured: boolean;
+  hasCaseStudy?: boolean;
   status: ProjectStatus;
 };
 
 export const projectCover = (slug: string) => `/projects/${slug}/01.svg`;
 
-// ——— Landing-only content ———
-
 export const heroContent = {
   role: "Full-stack engineer",
   headline: "Building multi-tenant business platforms",
   intro:
-    "I design and ship production-grade systems for retail, pharmacy, and restaurant operations—multi-branch inventory, real-time workflows, RBAC, and Ethiopian market needs (Telebirr, M-Pesa, EN/AM, dual calendar).",
+    "I design and ship production-grade systems for documents, retail, pharmacy, and restaurant operations—multi-branch inventory, real-time workflows, RBAC, and Ethiopian market needs (Telebirr, M-Pesa, EN/AM, dual calendar).",
 };
 
 export const landingStats = [
-  { num: 3, text: "Live enterprise platforms" },
+  { num: 4, text: "Live enterprise platforms" },
   { num: 30, suffix: "+", text: "API & domain modules" },
   { num: 10, suffix: "+", text: "Business reports per app" },
   { num: 3, text: "Real-time Socket.IO apps" },
@@ -57,12 +56,34 @@ export const techStackGroups = [
   },
 ];
 
-// ——— Flagship (featured) ———
-
-export const flagshipProjects: PortfolioProject[] = [
+/** All work-page projects in display order (enterprise first, then others) */
+export const enterpriseProjects: PortfolioProject[] = [
+  {
+    slug: "docuiva",
+    num: "01",
+    category: "Enterprise · Full-stack",
+    title: "DocuIva",
+    tagline: "Document workflow & management platform",
+    description:
+      "Production document management for organizing, tracking, and processing business documents—with role-based access and bilingual support (English & Amharic).",
+    highlights: [
+      "Structured document workflows and tracking",
+      "Role-based access control",
+      "Bilingual UI (EN / AM)",
+      "Built at Syber Tech — live at dociva.et",
+    ],
+    stack: ["Next.js", "TypeScript", "Tailwind CSS", "Node.js", "MongoDB"],
+    coverSrc: projectCover("docuiva"),
+    liveUrl: "https://dociva.et/",
+    showGithub: true,
+    githubPrivate: true,
+    featured: true,
+    hasCaseStudy: false,
+    status: "live",
+  },
   {
     slug: "cyber-pos",
-    num: "01",
+    num: "02",
     category: "Enterprise · Full-stack",
     title: "Cyber POS",
     tagline: "Multi-tenant POS & inventory for retail and hospitality",
@@ -88,18 +109,20 @@ export const flagshipProjects: PortfolioProject[] = [
     ],
     coverSrc: projectCover("cyber-pos"),
     liveUrl: "https://cyberpos.vercel.app/",
-    showGithub: false,
+    showGithub: true,
+    githubPrivate: true,
     featured: true,
+    hasCaseStudy: true,
     status: "live",
   },
   {
     slug: "orderpulse",
-    num: "02",
+    num: "03",
     category: "Enterprise · Full-stack",
     title: "OrderPulse",
     tagline: "Cafe & restaurant operations for Ethiopian businesses",
     description:
-      "OrderPulse (cafe-management) is a multi-tenant platform combining cafe order lifecycle management with inventory, purchases, sales, stock transfers, expenses, and operational reporting—built for Ethiopian cafes and restaurants.",
+      "Multi-tenant platform combining cafe order lifecycle management with inventory, purchases, sales, stock transfers, expenses, and operational reporting—built for Ethiopian cafes and restaurants.",
     highlights: [
       "End-to-end cafe orders: PENDING → SERVED → PAID with role-specific UIs",
       "Live updates for waiter, kitchen, payment, supervisor, and order transfers",
@@ -120,13 +143,15 @@ export const flagshipProjects: PortfolioProject[] = [
     ],
     coverSrc: projectCover("orderpulse"),
     liveUrl: "https://orderpulse.vercel.app/",
-    showGithub: false,
+    showGithub: true,
+    githubPrivate: true,
     featured: true,
+    hasCaseStudy: true,
     status: "live",
   },
   {
     slug: "pharma-flow",
-    num: "03",
+    num: "04",
     category: "Enterprise · Full-stack",
     title: "Pharma Flow",
     tagline: "Pharmacy & distributor inventory with batch/expiry tracking",
@@ -152,37 +177,15 @@ export const flagshipProjects: PortfolioProject[] = [
     ],
     coverSrc: projectCover("pharma-flow"),
     liveUrl: "https://pharmaflow.vercel.app/",
-    showGithub: false,
+    showGithub: true,
+    githubPrivate: true,
     featured: true,
+    hasCaseStudy: true,
     status: "live",
-  },
-];
-
-// ——— More projects (secondary) ———
-
-export const moreProjects: PortfolioProject[] = [
-  {
-    slug: "docuiva",
-    num: "01",
-    category: "Full-stack",
-    title: "DocuIva",
-    tagline: "Document workflow & management",
-    description:
-      "Document management application for organizing, tracking, and working with business documents. Built with a mobile-first UI and bilingual support (English & Amharic).",
-    highlights: [
-      "Structured document workflows",
-      "Role-based access",
-      "Bilingual UI (EN / AM)",
-    ],
-    stack: ["Next.js", "TypeScript", "Tailwind CSS", "MongoDB"],
-    coverSrc: projectCover("docuiva"),
-    showGithub: false,
-    featured: false,
-    status: "in-development",
   },
   {
     slug: "cprms",
-    num: "02",
+    num: "05",
     category: "Full-stack · Healthcare",
     title: "CPRMS",
     tagline: "Clinical Patient Record Management System",
@@ -199,12 +202,13 @@ export const moreProjects: PortfolioProject[] = [
     liveUrl: "https://cprms.vercel.app",
     githubUrl: "https://github.com/AbdelazizEbrahim/cprms",
     showGithub: true,
+    githubPrivate: false,
     featured: false,
     status: "live",
   },
   {
     slug: "bahirmart-mobile",
-    num: "03",
+    num: "06",
     category: "Mobile",
     title: "Bahir Mart Mobile",
     tagline: "Customer marketplace & auction app",
@@ -220,12 +224,13 @@ export const moreProjects: PortfolioProject[] = [
     legacyImage: "/bahir mobile.png",
     githubUrl: "https://github.com/AbdelazizEbrahim/bahirmart",
     showGithub: true,
+    githubPrivate: false,
     featured: false,
     status: "github-only",
   },
   {
     slug: "bahirmart-web",
-    num: "04",
+    num: "07",
     category: "Full-stack",
     title: "Bahir Mart Marketplace",
     tagline: "Marketplace with auctions & fraud detection",
@@ -248,12 +253,13 @@ export const moreProjects: PortfolioProject[] = [
     legacyImage: "/Bahir Market photo.png",
     githubUrl: "https://github.com/AbdelazizEbrahim/bahirmart-web",
     showGithub: true,
+    githubPrivate: false,
     featured: false,
     status: "github-only",
   },
   {
     slug: "bahirmart-admin",
-    num: "05",
+    num: "08",
     category: "Full-stack",
     title: "Bahir Mart Admin",
     tagline: "Operations dashboard for marketplace & auctions",
@@ -276,18 +282,24 @@ export const moreProjects: PortfolioProject[] = [
     legacyImage: "/Bahir admin.png",
     githubUrl: "https://github.com/AbdelazizEbrahim/bahirmart-admin",
     showGithub: true,
+    githubPrivate: false,
     featured: false,
     status: "github-only",
   },
 ];
 
-export const allWorkProjects = [...flagshipProjects, ...moreProjects];
+/** Primary enterprise apps (home + resume highlights) */
+export const flagshipProjects = enterpriseProjects.filter((p) => p.featured);
+
+/** @deprecated Use enterpriseProjects */
+export const moreProjects: PortfolioProject[] = [];
+
+export const allWorkProjects = enterpriseProjects;
 
 export function getProjectBySlug(slug: string): PortfolioProject | undefined {
-  return allWorkProjects.find((p) => p.slug === slug);
+  return enterpriseProjects.find((p) => p.slug === slug);
 }
 
-/** Gallery image paths: public/projects/{slug}/01–09 */
 export function projectGallerySources(slug: string, max = 9): string[] {
   const ext = ["webp", "png", "jpg", "jpeg"];
   const sources: string[] = [];

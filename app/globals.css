@@ -3,8 +3,11 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    @apply overflow-x-hidden;
+  }
   body {
-    @apply font-primary bg-primary text-white leading-loose;
+    @apply font-primary bg-primary text-white leading-loose overflow-x-hidden max-w-[100vw];
   }
   .h1 {
     @apply text-[40px] xl:text-[68px] leading-[1.1] font-semibold;

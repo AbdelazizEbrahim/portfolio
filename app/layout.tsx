@@ -1,9 +1,11 @@
-import { JetBrains_Mono } from 'next/font/google';
+import { JetBrains_Mono } from "next/font/google";
+import { Toaster } from "react-hot-toast";
 import "./globals.css";
-import React from 'react';
-import Header from '@/components/Header';
-import PageTransition from '@/components/PageTransition';
-import StairTransition from '@/components/StairTransition';
+import React from "react";
+import Header from "@/components/Header";
+import PageTransition from "@/components/PageTransition";
+import StairTransition from "@/components/StairTransition";
+import { siteMetadata } from "@/lib/metadata";
 
 const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
@@ -11,23 +13,28 @@ const jetbrainsMono = JetBrains_Mono({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
 });
 
-export const metadata = {
-  title: "Abdelaziz Ebrahim | Full-Stack Engineer",
-  description:
-    "Full-stack engineer building multi-tenant business platforms—POS, pharmacy, and cafe systems with PostgreSQL, Prisma, Socket.IO, and real-time operations.",
-};
+export const metadata = siteMetadata;
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
-      <head>
-        <title>{metadata.title}</title>
-        <meta name="description" content={metadata.description} />
-      </head>
-      <body className={`${jetbrainsMono.variable} px-5`}>
+    <html lang="en" className="overflow-x-hidden">
+      <body
+        className={`${jetbrainsMono.variable} px-4 sm:px-5 overflow-x-hidden max-w-[100vw]`}
+      >
         <Header />
         <StairTransition />
         <PageTransition>{children}</PageTransition>
+        <Toaster
+          position="bottom-center"
+          toastOptions={{
+            style: {
+              background: "#232329",
+              color: "#fff",
+              border: "1px solid rgba(0,255,153,0.35)",
+            },
+            error: { iconTheme: { primary: "#00ff99", secondary: "#1c1c22" } },
+          }}
+        />
       </body>
     </html>
   );
