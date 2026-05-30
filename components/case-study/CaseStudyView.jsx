@@ -32,8 +32,8 @@ export default function CaseStudyView({ study }) {
             className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-10 items-start
               lg:relative lg:left-1/2 lg:right-1/2 lg:-ml-[50vw] lg:-mr-[50vw] lg:w-screen lg:max-w-[100vw]"
           >
-            <div className="min-w-0 lg:pl-[max(1rem,calc((100vw-min(100%,80rem))/2+1rem))] lg:pr-6 xl:pr-10">
-              <div className="flex flex-wrap items-center gap-3 mb-3 sm:mb-4">
+            {/* Text column — flush to left edge on desktop */}
+            <div className="min-w-0 px-4 sm:px-6 lg:px-8 xl:pl-12 xl:pr-10">              <div className="flex flex-wrap items-center gap-3 mb-3 sm:mb-4">
                 <span className="text-accent text-sm uppercase tracking-widest">
                   {study.category}
                 </span>
@@ -60,6 +60,7 @@ export default function CaseStudyView({ study }) {
                     Open live demo
                   </a>
                 )}
+
                 <Link
                   href="/contact"
                   className="inline-flex items-center justify-center min-h-[48px] px-6 rounded-full border border-white/25 text-white font-semibold hover:border-accent hover:text-accent transition-colors"
@@ -69,9 +70,10 @@ export default function CaseStudyView({ study }) {
               </div>
             </div>
 
+            {/* Image column — wider and taller */}
             <div
               className="relative w-full lg:w-full aspect-[16/10] sm:aspect-[3/2] lg:aspect-auto
-                min-h-[160px] max-h-[220px] sm:max-h-[260px] lg:max-h-[min(42vh,400px)] lg:min-h-[240px]
+                min-h-[200px] max-h-[300px] sm:max-h-[360px] lg:min-h-[480px] lg:max-h-[min(70vh,640px)]
                 rounded-md overflow-hidden border border-white/5 bg-primary/20
                 lg:rounded-none lg:border-y-0 lg:border-r-0 lg:border-l lg:border-l-white/10"
             >
@@ -88,12 +90,12 @@ export default function CaseStudyView({ study }) {
         </header>
 
         {/* Gallery */}
-        <section className="mb-12 sm:mb-16" aria-labelledby="gallery-heading">
+        {/* <section className="mb-12 sm:mb-16" aria-labelledby="gallery-heading">
           <h2 id="gallery-heading" className="sr-only">
             Project gallery
           </h2>
           <ProjectGallery slug={study.slug} title={study.title} />
-        </section>
+        </section> */}
 
         {/* Problem / Solution */}
         <section className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12 sm:mb-16">
@@ -163,7 +165,10 @@ export default function CaseStudyView({ study }) {
                     </p>
                   </div>
                   {i < study.architecture.layers.length - 1 && (
-                    <p className="text-center text-accent/60 py-1 text-lg" aria-hidden>
+                    <p
+                      className="text-center text-accent/60 py-1 text-lg"
+                      aria-hidden
+                    >
                       ↓
                     </p>
                   )}
