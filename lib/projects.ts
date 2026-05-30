@@ -59,7 +59,7 @@ export const techStackGroups = [
 /** All work-page projects in display order (enterprise first, then others) */
 export const enterpriseProjects: PortfolioProject[] = [
   {
-    slug: "docuiva",
+    slug: "dociva",
     num: "01",
     category: "Enterprise · Full-stack",
     title: "Dociva",
@@ -207,28 +207,6 @@ export const enterpriseProjects: PortfolioProject[] = [
     status: "live",
   },
   {
-    slug: "bahirmart-mobile",
-    num: "06",
-    category: "Mobile",
-    title: "Bahir Mart Mobile",
-    tagline: "Customer marketplace & auction app",
-    description:
-      "Flutter customer app for Bahir Mart: product ordering, auction bidding, order tracking, and integrated payments.",
-    highlights: [
-      "Product ordering and auctions",
-      "Order tracking",
-      "Flutter + Next.js backend",
-    ],
-    stack: ["Flutter", "Dart", "Next.js"],
-    coverSrc: projectCover("bahirmart-mobile"),
-    legacyImage: "/bahir mobile.png",
-    githubUrl: "https://github.com/AbdelazizEbrahim/bahirmart",
-    showGithub: true,
-    githubPrivate: false,
-    featured: false,
-    status: "github-only",
-  },
-  {
     slug: "bahirmart-web",
     num: "07",
     category: "Full-stack",
@@ -286,6 +264,28 @@ export const enterpriseProjects: PortfolioProject[] = [
     featured: false,
     status: "github-only",
   },
+  // {
+  //   slug: "bahirmart-mobile",
+  //   num: "06",
+  //   category: "Mobile",
+  //   title: "Bahir Mart Mobile",
+  //   tagline: "Customer marketplace & auction app",
+  //   description:
+  //     "Flutter customer app for Bahir Mart: product ordering, auction bidding, order tracking, and integrated payments.",
+  //   highlights: [
+  //     "Product ordering and auctions",
+  //     "Order tracking",
+  //     "Flutter + Next.js backend",
+  //   ],
+  //   stack: ["Flutter", "Dart", "Next.js"],
+  //   coverSrc: projectCover("bahirmart-mobile"),
+  //   legacyImage: "/bahir mobile.png",
+  //   githubUrl: "https://github.com/AbdelazizEbrahim/bahirmart",
+  //   showGithub: true,
+  //   githubPrivate: false,
+  //   featured: false,
+  //   status: "github-only",
+  // },
 ];
 
 /** Primary enterprise apps (home + resume highlights) */
